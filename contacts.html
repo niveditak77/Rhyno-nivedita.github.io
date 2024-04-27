@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><b></b><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Location</h3>
+                        <p>Rhyno Wheels Private limited, Near UG hostel gate #2, 
+                            <br> Behind PDEU, Raisan, Gandhinagar, Gujarat, India</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><b></b><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Mobile no</h3>
+                        <p>+91-9023987528 </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><b></b><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>info@rhyno.in</p>
+                    </div>
+                </div>
+                <h2 class="txt">Connect with us</h2>
+                <ul class="sci">
+                    <li><a href="https://www.linkedin.com/company/rhyno-wheels"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.instagram.com/rhyno.in?igsh=MTV5dzF3aGNob3Z1NQ=="><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="contactForm">
+                <form id="contactForm">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="fullname" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required="required">
+                        <span>Email</span>    
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" required="required"></textarea>
+                        <span>Type your message here...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send">    
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                const formData = new FormData(this);
+                const name = formData.get("fullname");
+                const email = formData.get("email");
+                const message = formData.get("message");
+                
+                const emailBody = encodeURIComponent(`Hi Rhyno,\n${message}`);
+                const emailSubject = encodeURIComponent(`RHYNO - Message from ${name}`);
+                const mailtoLink = `mailto:info@rhyno.in?subject=${emailSubject}&body=${emailBody}`;
+                window.location.href = mailtoLink;
+
+                // Clear the form fields after submission
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>

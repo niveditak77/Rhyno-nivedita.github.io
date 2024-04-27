@@ -1,0 +1,262 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+@import url('https://fonts.google.com/specimen/Lato');
+@import url('https://fonts.google.com/specimen/Calibri');
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #131313;
+    margin: 0 10px;
+}
+
+.logo {
+    position: absolute;
+    height: auto;
+    right: 0px;
+    width: 220px;
+    top: 20px;
+}
+
+.payment{
+    background:white;
+    max-width:360px;
+    margin:80px auto;
+    height:auto;
+    padding: 35px;
+    padding-top:70px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.payment h2{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color:#373737;
+}
+
+.form .label{
+    display:block;
+    color: #424242;
+    margin-bottom: 6px;
+}
+/* Inputs */
+
+.form .input{
+    padding:13px 0 13px 25px;
+    width: 100%;
+    text-align: center;
+    border:2px solid #dddddd;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    word-wrap: 3px;
+    outline:none;
+    font-size:16px;
+    color:#373737;
+}
+
+.card-grp{
+    display:flex;
+    justify-content: space-between;
+}
+
+.card-item{
+    width:48%;
+}
+
+.space{
+    margin-bottom: 20px;
+    
+}
+
+.icon-relative{
+    position: relative;
+}
+
+.icon-relative .fa,
+.icon-relative .fa{
+    position: absolute;
+    bottom:12px;
+    left:15px;
+    font-size: 20px;
+    color:#212121;
+
+}
+.btn{
+    margin-top: 40px;
+    background: #2196f3;
+    padding:12px;
+    text-align: center;
+    color:#f8f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-logo {
+    position: absolute;
+    top:-50px;
+    left:50%;
+    transform:translateX(-50%);
+    width:100px;
+    height:100px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2) ;
+    text-align: center;
+    line-height: 85px;
+}
+
+.payment-logo::before{
+    content:'';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+    background:#2196f3;
+    border-radius:50%;
+}
+
+.payment-logo p{
+    color:#f8f8f8;
+    position: relative;
+    font-family: 'Lato',sans-serif;
+    font-size: 58px;
+}
+
+@media screen and (max-width:420px){
+    .card-grp{
+        flex-direction: column;
+    }
+    .card-item{
+        width:100%;
+        margin-bottom: 20px;        
+    }
+    .btn{
+        margin-bottom: 20px;
+    }
+    .logo {
+        position: absolute;
+        height: auto;
+        right: 0px;
+        width: 120px;
+        top: 10px;
+    }
+    
+}
+.payment .input:hover {
+    border-color:#F9ED32 ; 
+}
+
+/* Add hover effect for the button */
+.payment .btn:hover {
+    background: #F9ED32 ; 
+}
+
+.container{
+    max-width: 1170px;
+    margin:auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color:#1b1b1b;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width:25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size:18px;
+    color:#FFF225;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    
+}
+
+.footer-col h4::before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom:-10px;
+    background-color: #ffffff;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color:#ffffff;
+    display:block;
+    transition:all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+color:#FFF225;
+padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(225, 225, 225, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    background-color: #ffffff;
+}
+
+.footer-col .social-links a[href="https://www.linkedin.com/company/rhyno-wheels"]:hover {
+    color: #0077b5; /* Blue color for LinkedIn */
+}
+
+.footer-col .social-links a[href="https://www.instagram.com/rhyno.in?igsh=MTV5dzF3aGNob3Z1NQ=="]:hover {
+    color:#fb2149; /* Maroon red color for Instagram */
+}
+
+/*responsive*/
+
+@media(max-width: 767px) {
+    .footer-col{
+        width:25%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col{
+        width:100%;
+    }
+}

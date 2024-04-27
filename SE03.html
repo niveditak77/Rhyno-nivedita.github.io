@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="SE03 .css">
+    <title>SE03 lite</title>
+
+    <div class="container1">
+        <button class="btn1">Book Now</button>
+    </div>
+    
+    <div class="container" id ="bike">
+        <nav>
+           <img src = "rhyno_logo.png" class="logo">
+         
+        </nav>
+        <div class="content">
+            <h4>THE RHYNO</h4>
+            <h1>SE03</h1>
+            <p>Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn.</p>
+
+            <h3>Choose your color</h3>
+
+         <div class="colour-select">
+           
+            <div id="black"></div>
+            <div id="red"></div>
+           
+         </div>
+        </div>
+    </div>
+    <script>
+        
+        let blackbtn = document.getElementById("black");
+        let redbtn = document.getElementById("red");
+      
+
+        let bike = document.getElementById("bike");
+        
+        
+        blackbtn.onclick = function(){
+             bike.style.backgroundImage="url(Black1.png)";
+        }
+        redbtn.onclick = function(){
+             bike.style.backgroundImage="url(Redside_view.png)";
+        }
+       
+        
+    </script>
+</head>
+</body>
+
+    

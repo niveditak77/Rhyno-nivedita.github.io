@@ -1,0 +1,212 @@
+
+@import url('https://fonts.google.com/specimen/Poppins');
+@import url('https://fonts.google.com/specimen/Lato');
+@import url('https://fonts.google.com/specimen/Calibri');
+
+    * {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-section {
+    padding-top: 50px; /* Adjust top padding to move the section down slightly */
+    color: white;
+    background-color: #131313;
+    text-align: center; /* Align content to the center horizontally */
+}
+
+.service-section .container {
+    max-width: 1240px;
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-section .title {
+    color: white;
+    position: relative;
+    padding-bottom: 45px;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: capitalize;
+    /* Remove left positioning */
+    /* Adjust top margin to position the title */
+    margin-top: 0px;
+}
+
+.service-section .title span {
+    color: yellow;
+}
+
+.service-section .title span{
+    color:yellow;
+}
+
+
+
+.service-section .title::after {
+    top: 38px;
+    width: 45px;
+    height: 6px;
+}
+.service-section .title::before{
+    content: '';
+    position:absolute;
+    top:40px;
+    left:50%;
+    width: 150px;
+    height: 3px;
+    background-color: yellow;
+    transform:translateX(-50%);
+}
+
+.service-section .title::after{
+    content: '';
+    position:absolute;
+    top: 38px;
+    left:50%;
+    width: 45px;
+    height: 6px;
+    background-color: yellow;
+    transform:translateX(-50%);
+}
+
+.header-section {
+    margin-bottom: 0; /* Remove the margin-bottom */
+    padding-top: -2px; /* Add padding to the top to move the header up */
+}
+.service-section .service-column {
+    max-width: 32%;
+    padding: 0 15px;
+    height: 400px; /* Set a fixed height for all service columns */
+    box-sizing: border-box; /* Include padding and border in the total height */
+    display: flex; /* Add display flex to align content vertically */
+    flex-direction: column; /* Stack child elements vertically */
+    margin-right: 1%; /* Add margin to create space between columns */
+    margin-top: 5px; /* Move the service column slightly up */
+}
+
+.service-section .service-column .single-service {
+    position: relative;
+    margin-top: 0; /* Reset margin-top for individual service boxes */
+    background-color: #24252a;
+    border-radius: 0;
+    padding: 40px 30px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center;
+    height: 100%; /* Fill the entire height of the service column */
+}
+
+.service-section .service-column.small {
+    max-width: 32%; /* Set smaller width for the last two columns */
+    height: 191px; /* Set smaller height for the last two columns */
+    margin-right: 0; /* Remove margin for the last two columns */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+}
+
+.service-section .service-column .single-service .content {
+    position: relative;
+    z-index: 20;
+}
+
+.service-section .service-column .single-service .content .main-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 23px;
+    color: darkgrey;
+    transition: color 0.3s;
+}
+
+.service-section .service-column .single-service .content .description {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 14px;
+    color: grey;
+    transition: color 0.3s;
+}
+
+.service-section .service-column .single-service:hover .description{ /*font color change after hover*/
+    color:black;
+}
+
+.service-section .service-column .single-service .circle-before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    border-radius: 50%;
+    transition: all 0.6s;
+}
+.service-section .service-column .single-service:hover .circle-before {
+width: 100%;
+height: 100%;
+transform: none;
+border: 0;
+border-radius: 0;
+opacity:0.8;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+
+    /* Adjust service section layout for mobile */
+    .service-section {
+      padding-top: 5px; /* Reduce top padding for better spacing on mobile */
+    }
+  
+    .service-section .container {
+      max-width: 100%; /* Set container to full width */
+    }
+  
+    /* Adjust service columns for mobile */
+    .service-section .service-column {
+      max-width: 100%; /* Set each column to full width on mobile */
+      padding: 15px;
+      margin-right: 0; /* Remove margin-right for single column layout */
+      margin-top: 10px; /* Increase margin-top for spacing */
+    }
+  
+    .service-section .service-column.small {
+        max-width: 100%; /* Set smaller width for the last two columns */
+        height: 100%; /* Set smaller height for the last two columns */
+        margin-right: 0; /* Remove margin for the last two columns */
+        margin-bottom: 10px; /* Add bottom margin for spacing */
+    }
+    
+  
+    /* Adjust title size and spacing for mobile */
+    .service-section .title {
+      font-size: 28px; /* Reduce title size */
+      margin-top: 30px; /* Increase margin-top */
+    }
+  
+    /* Adjust service content for mobile readability */
+    .service-section .service-column .single-service .content .main-title {
+      font-size: 20px; /* Reduce main title size */
+    }
+  
+    .service-section .service-column .single-service .content .description {
+      font-size: 12px; /* Reduce description size */
+    }
+  
+    /* Adjust circle animation for mobile */
+    .service-section .service-column .single-service:hover .circle-before {
+      width: 100%; /* Reduce circle size on hover */
+      height: 100%;
+      opacity: 0.7; /* Adjust hover opacity */
+    }
+  
+    /* You can add more styles here to further enhance the mobile experience */
+  }

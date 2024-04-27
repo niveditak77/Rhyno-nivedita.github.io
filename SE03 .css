@@ -1,0 +1,191 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+@import url('https://fonts.google.com/specimen/Lato');
+@import url('https://fonts.google.com/specimen/Calibri');
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    background-color: #1b1b1b;;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(Redside_view.png);
+    background-position: right center; /* Center the background image */
+    background-size: 80%; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Ensures the background image isn't repeated */
+    padding: 20px 10%;
+}
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    position: absolute;
+    height: auto;
+    right: 0px;
+    width: 220px;
+    top: 20px;
+}
+
+.content {
+    margin-top: 5%;
+}
+
+.content h4 {
+    position:relative;
+    color:yellow;
+    font-size: 34px;
+    margin-bottom: 5px; /* Reduce margin-bottom to add less space */
+}
+
+.content h1 {
+    font-size: 100px;
+    color: #414141;
+    margin-top: 10px; /* Add margin-top to create space between h4 and h1 */
+}
+
+
+.content p{
+    max-width: 380px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ededed;;
+    font-family: 'Calibri', sans-serif;
+    letter-spacing: 1px;
+}
+
+.content h3{
+    margin-top: 30px;
+    font-weight:600 ;
+    font-size:24px;
+    color:white;
+}
+
+.colour-select div{
+    background: white;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.colour-select{
+    display:flex;
+    margin-top: 30px;
+}
+
+.colour-select #black{
+    background: black;
+}
+.colour-select #red{
+    background: red;
+}
+
+.colour-select div:hover {
+    transform: scale(1.1); /* Scale up the button on hover */
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+.colour-select div {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    transition: box-shadow 0.3s ease;
+}
+
+.colour-select div:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.container1 {
+    position: absolute;
+    bottom: 48px;
+    left:9.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    border: 2px solid #f3ff00;
+    border-radius: 28px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 60px 12px -18px rgba(0, 0, 0, 0.1), 0 60px 20px -12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.btn1:hover{
+    transform: translateX(-20px);
+    box-shadow: 0 40px 10px -18px rgba(0, 0, 0, 0.2), 0 40px 16px -18px rgba(0, 0, 0, 0.2);
+}
+
+.btn1 {
+    background: #000;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px 5%;
+    }
+    nav .logo {
+        width: 150px;
+        top: 10px;
+    }
+    .content h4 {
+        font-size: 28px;
+    }
+    .content h1 {
+        font-size: 60px;
+    }
+    .content p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+    .content h3 {
+        font-size: 20px;
+    }
+    .colour-select {
+        margin-top: 20px;
+    }
+    .colour-select div {
+        width: 40px;
+        height: 40px;
+    }
+    .container1 {
+        bottom: 20px;
+    }
+    button {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+        padding: 8px;
+    }
+    .container {
+        background-position: center 80%; /* Position the background image slightly up */
+    }
+    
+}

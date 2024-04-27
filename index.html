@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   
+    <link rel="stylesheet" href="styles.css">
+    <title>home page</title>
+</head>
+<body>
+
+    <!--Pre-booknow  Button -->
+    <div class="container">
+        <button class="btn2" onclick="redirectToPreBookPage()">Pre-Book Now</button>
+        <button class="btn2" onclick="redirectToCompareallpage()">Product Checkout</button>
+    </div>
+
+    <div class="changing-text">
+        <h2>"Let's Elevate Your Ride Experience With Rhyno – Where Superiority Meets <span id="changing-word"> </span></h2>
+    </div>
+
+    <div class="btn">
+        <span class="fas fa-bars"></span>
+    </div>
+    <img src="rhyno_logo.png" class="logo"/> 
+
+    <img id="vehicle-photo-golden" src="Golden.png" alt="Golden Vehicle Photo">
+    <img id="vehicle-photo-red" src="Red.png" alt="Red Vehicle Photo">
+    <img id="vehicle-photo-blue" src="Blue.png" alt="Blue Vehicle Photo">
+    <img id="vehicle-photo-black" src="Black.png" alt="Black Vehicle Photo">
+
+    <!-- The menu -->
+    <nav class="sidebar">
+        <div class="text">Menu</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Our USP</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+                <a href="#" class="serv-btn">Products
+                    <span class ="fas fa-caret-down second"></span>
+                </a>
+                <ul class="serv-show">
+                    <li><a href="SE03 lite.html">SE03 Lite</a></li>
+                    <li><a href="SE03.html">SE03</a></li>
+                    <li><a href="SE03 MAX.html">SE03 Max</a></li>
+                    <li><a href="Compareall.html">Compare all</a></li>
+                </ul>
+            </li>
+            <li><a href="contacts.html">Contact Us</a></li>
+            <li><a href="Rentals.html">Rentals</a></li>
+            <li><a href="prebook.html">Pre-book now</a></li>
+        </ul>     
+    </nav>
+
+    <div class="social-menu">
+        <ul>
+            <li><a href="https://www.linkedin.com/company/rhyno-wheels"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://www.instagram.com/rhyno.in?igsh=MTV5dzF3aGNob3Z1NQ=="><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- JavaScript includes -->
+    <script>
+        const words = ['Style."', 'Elegance."', 'Minimalism."', 'Comfort."'];
+        const changingWord = document.getElementById('changing-word');
+        let index = 0;
+
+        function changeWord() {
+            changingWord.textContent = words[index];
+            index = (index + 1) % words.length;
+        }
+
+        setInterval(changeWord, 1500);
+
+        /*vehicle changing*/
+        const vehiclePhotos = [
+            "Golden.png",
+            "Red.png",
+            "Blue.png",
+            "Black.png"
+        ];
+
+        let currentPhotoIndex = 0;
+
+        function changePhoto() {
+            document.getElementById("vehicle-photo-golden").src = vehiclePhotos[currentPhotoIndex];
+            document.getElementById("vehicle-photo-red").src = vehiclePhotos[currentPhotoIndex];
+            document.getElementById("vehicle-photo-blue").src = vehiclePhotos[currentPhotoIndex];
+            document.getElementById("vehicle-photo-black").src = vehiclePhotos[currentPhotoIndex];
+
+            currentPhotoIndex = (currentPhotoIndex + 1) % vehiclePhotos.length;
+        }
+
+        setInterval(changePhoto, 3000);
+    </script>
+    <script>
+    $(document).ready(function() {
+        // Toggle sidebar on button click
+        $('.btn').click(function() {
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+        });
+    
+        // Toggle submenu for Products
+        $('.serv-btn').click(function() {
+            $('nav ul.serv-show').toggleClass("show1");
+            $(this).find('span').toggleClass("rotate");
+        });
+    
+        // Add active class to clicked menu item
+        $('nav ul li').click(function() {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    
+        // Add click event for "Our USP" item
+        $('nav ul li:nth-child(2)').click(function() {
+            // Add logic here for what should happen when "Our USP" is clicked
+            // For example, you can navigate to a different page or expand a submenu
+            // You can use window.location.href to navigate to a different page
+            // Example: window.location.href = "our_usp.html";
+        });
+    });
+</script>
+<script>
+     function redirectToCompareallpage() {
+        window.location.href = "Compareall.html";
+    }
+
+    function redirectToPreBookPage() {
+        window.location.href = "prebook.html";
+    }
+</script>
+</body>
+</html>
